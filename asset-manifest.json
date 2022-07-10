@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PokeApiReact/static/css/main.ffc97e0d.css",
-    "main.js": "/PokeApiReact/static/js/main.fbc85a40.js",
+    "main.js": "/PokeApiReact/static/js/main.41a8d17f.js",
     "index.html": "/PokeApiReact/index.html",
     "main.ffc97e0d.css.map": "/PokeApiReact/static/css/main.ffc97e0d.css.map",
-    "main.fbc85a40.js.map": "/PokeApiReact/static/js/main.fbc85a40.js.map"
+    "main.41a8d17f.js.map": "/PokeApiReact/static/js/main.41a8d17f.js.map"
   },
   "entrypoints": [
     "static/css/main.ffc97e0d.css",
-    "static/js/main.fbc85a40.js"
+    "static/js/main.41a8d17f.js"
   ]
 }
