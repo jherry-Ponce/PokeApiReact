@@ -10,10 +10,10 @@ export const Rutas=()=>{
   
         <Header/>
         <Routes>
-            <Route path="PokeApiReact/" element={<Home/>}/>
-            <Route path="PokeApiReact/Resul" element={<Home/>}/>
-            <Route path="PokeApiReact/Resul/:id" element={<Result/>}/>
-            <Route path="*" element={<div>  <q>ue haces wey?</q></div> } />
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Resul" element={<Home/>}/>
+            <Route path="/Resul/:id" element={<Result/>}/>
+            <Route path="/*" element={<div>  <q>ue haces wey?</q></div> } />
         </Routes>
     
       
