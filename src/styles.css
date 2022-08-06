@@ -1,0 +1,14 @@
+.logo{
+    width: 3em;
+    object-position: center;
+    object-fit: cover;
+}
+.modals{
+    flex-wrap: wrap;
+}
+.pokemon-fail{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
