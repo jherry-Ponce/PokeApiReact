@@ -15,7 +15,6 @@ const Header=()=>{
       const text=document.querySelector("input").value;
         setDato(text);  
         console.log(text);
-
     } 
 
     return(

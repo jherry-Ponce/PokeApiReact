@@ -5,7 +5,6 @@ import { getDataFromPokemon } from "../service/pokeapi";
 import descarga from '../img/descarga.jpg'
 
 export const Cardcomponent=(props)=>{
-    
     const [pokemonImg, setPokemonImg] = useState({});
     const fetchDetailFromPokemon = async () => {
         const pokemon = await getDataFromPokemon(props.url);
@@ -16,31 +15,24 @@ export const Cardcomponent=(props)=>{
       useEffect(()=>{
         fetchDetailFromPokemon();
     },[props.nombre])
-   
     return(
                 <>
                     {
                     pokemonImg === null ?
-                    <CardMedia 
+                    <CardMedia
                     component="img"
-                    image={descarga} 
-                    alt={props.nombre}  
+                    image={descarga}
+                    alt={props.nombre}
                     className="pokemon-fail"
                     />
-                    
-                 
-                 
                  :
-                 
-                
-                 <CardMedia 
+                 <CardMedia
                  component="img"
                  width="345"
                  height="345"
-                 image={pokemonImg} 
-                 alt={props.nombre}  
+                 image={pokemonImg}
+                 alt={props.nombre}
                  />
-                  
                 }
                 </>
     )
