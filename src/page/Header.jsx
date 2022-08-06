@@ -6,20 +6,16 @@ import { useState } from "react";
 import { Link} from 'react-router-dom'
 import pokebolas from '../img/pokebolas.png'
 
-
 const Header=()=>{
-
      const [dato, setDato]=useState(" ")
-
      const handleCaptura =  (e) =>{
       const text=document.querySelector("input").value;
-        setDato(text);  
-        console.log(text);
-    } 
+        setDato(text);
+    }
 
     return(
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-warning bg-gradient">
         <div className="container">
           <Link className="navbar-brand" to="PokeApiReact/"><img src={pokebolas} className="logo" alt="logo"/></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,8 +24,7 @@ const Header=()=>{
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                
-                <Link className="nav-link active" aria-current="page" to="/">Pokemones</Link>
+                <Link className="nav-link active" aria-current="page" to="/"><h1>Pokemon</h1></Link>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -39,7 +34,6 @@ const Header=()=>{
           </div>
         </div>
       </nav>
-     
     </>
     )
 }

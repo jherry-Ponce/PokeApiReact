@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 import { Cardcomponent } from "../components/Cardcomponent";
 import { Modalcomponent } from "../components/Modalcomponent";
+import logofooter from '../img/logo-footer.svg'
 const Home = (props) => {
   //variable que guarda la lista
   const [pokemones, setPokemon] = useState([]);
@@ -23,8 +24,7 @@ const Home = (props) => {
       filtar(listPokemones.results);
     }
   };
-  //funcion para ejecutar la funcion de la api
-  //aca llamamos la funcion que deseamos ejecutar
+
   //TODO: useEffect se coloca un array vacio para evitar un bucle infinito
   //la funcion que esta dentro del usseefect se llama n veces de forma infinita
   const filtar = async (dato) => {
@@ -50,13 +50,13 @@ const Home = (props) => {
   return (
     <>
       <div className="d-flex justify-content-center mt-3 mb-3 text-danger text-uppercase fs-1">
-        <h1>pokedex</h1>
+        <img className="logo-home" src={logofooter} alt="logo" />
       </div>
       <Grid container justifyContent="center" alignItems="center" gap={3}>
         {pokemones.map((info, index) => (
-          <div>
+          <div key={index}>
             <Grid item xs={12}>
-              <Card sx={{ maxWidth: 300 }}>
+              <Card sx={{ maxWidth: 300 }} >
                 <Cardcomponent nombre={info.name} url={info.url} />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">

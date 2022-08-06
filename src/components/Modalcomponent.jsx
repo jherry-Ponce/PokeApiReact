@@ -1,30 +1,22 @@
 import { useState } from "react";
 import Chip from "@mui/material/Chip";
-import {
-  Button,
-  Dialog,
-  DialogContent,
-  Grid,
-  Slider,
-} from "@mui/material";
+import { Button, Dialog,DialogContent,Grid,Slider} from "@mui/material";
 import "../styles.css";
 import { getDataFromPokemon } from "../service/pokeapi";
 export const Modalcomponent = (props) => {
   const [abrir, setAbrir] = useState(false);
   const [pokemonData, setPokemonData] = useState({});
-  // como se lee un atributo que estamos recibiendo del componente
-  // padre
+  // como se lee un atributo que estamos recibiendo del componente padre
   const fetchDetailFromPokemon = async () => {
     const pokemon = await getDataFromPokemon(props.url);
     setPokemonData(pokemon);
   };
-
   const handleOpenDialog = async () => {
     if (!abrir) {
       await fetchDetailFromPokemon();
     }
     setAbrir(!abrir);
-  };
+  }
   let color = "";
   return (
     <div className="w-100 container">
@@ -34,8 +26,8 @@ export const Modalcomponent = (props) => {
       <Dialog
         open={abrir}
         onClose={handleOpenDialog}
-        fullWidth="md"
         maxWidth="md"
+        fullWidth='lg'
       >
         <DialogContent>
           {/* Esto extrar los keys de un objeto */}
@@ -83,7 +75,6 @@ export const Modalcomponent = (props) => {
                         alt={props.nombre}
                       />
                     </figure>
-                 
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}   >
                   <div className="w-100">
