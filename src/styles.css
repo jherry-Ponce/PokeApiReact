@@ -14,7 +14,7 @@
     object-fit: cover;
 }
 .gradiente{
-    background-image: radial-gradient(circle, rgb(255, 83, 30), rgba(248, 248, 55, 0.938), rgb(255, 255, 255));
+    background-image: radial-gradient(circle,#00968800,#b600ff,#fff);
 }
 .modals{
     flex-wrap: wrap;
