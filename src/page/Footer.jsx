@@ -3,7 +3,7 @@ import React from 'react'
 import logofooter from '../img/logo-footer.svg'
 export const Footer = () => {
   return (
-    <div className='bg-dark bg-gradient text-white'>
+    <div className='bg-dark text-white'>
         <Container>
         <Grid container   spacing={2} className="tex_footer">
             <Grid item xs={8}>
