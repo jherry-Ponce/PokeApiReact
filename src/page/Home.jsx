@@ -5,7 +5,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
+import { CircularProgress, Grid } from "@mui/material";
 import { Cardcomponent } from "../components/Cardcomponent";
 import { Modalcomponent } from "../components/Modalcomponent";
 import logofooter from '../img/logo-footer.svg'
@@ -53,7 +53,8 @@ const Home = (props) => {
         <img className="logo-home" src={logofooter} alt="logo" />
       </div>
       <Grid container justifyContent="center" alignItems="center" gap={3}>
-        {pokemones.map((info, index) => (
+        { pokemones.length !==0 ?
+        pokemones.map((info, index) => (
           <div key={index}>
             <Grid item xs={12}>
               <Card sx={{ maxWidth: 300 }} >
@@ -69,7 +70,8 @@ const Home = (props) => {
               </Card>
             </Grid>
           </div>
-        ))}
+        )) : <CircularProgress />
+        }
       </Grid>
       <div className="container d-flex justify-content-center mt-3 mb-3">
         {props.valor ? (
