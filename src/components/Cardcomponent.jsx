@@ -26,6 +26,7 @@ export const Cardcomponent=(props)=>{
                  <CardMedia
                  className="gradiente "
                  component="img"
+                 loading="lazy"
                  width="345"
                  height="345"
                  image = {pokemonImg}
