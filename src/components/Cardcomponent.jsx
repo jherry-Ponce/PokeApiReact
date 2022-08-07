@@ -8,7 +8,8 @@ export const Cardcomponent=(props)=>{
     const [pokemonImg, setPokemonImg] = useState({});
     const fetchDetailFromPokemon = async () => {
         const pokemon = await getDataFromPokemon(props.url);
-        setPokemonImg(pokemon.sprites.other["home"].front_default)};
+        setPokemonImg(pokemon.sprites.other["official-artwork"]
+        .front_default)};
       useEffect(()=>{
         fetchDetailFromPokemon();
     },[props.nombre])
